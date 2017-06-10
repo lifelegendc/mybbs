@@ -41,12 +41,12 @@
  		wel = "晚上好";
  	}
 
- 	if ((String)session.getAttribute("user_name") == null) {
+ 	if (((String)session.getAttribute("user_name") == null)&&((String)session.getAttribute("admin_name") == null)) {
  %>
         <font color="#000000">游客，<%=wel%>!&nbsp;&nbsp;<a href="jspLogin.jsp">登录</a>&nbsp;/&nbsp;<a
 							href="insertReg.jsp">注册</a>&nbsp;/&nbsp;<a href="jspLogin.jsp">首页</a></font>
         <%
- 	} else if (!session.getAttribute("user_name").equals("admin")) {
+ 	} else if (session.getAttribute("admin_name")==null) {
  		
 		
  %><font color="white">
@@ -59,7 +59,7 @@
  	else{
  		
  		%><font color="white">
-        <%=session.getAttribute("user_name") + "，" + wel%>，欢迎来到编程技术交流中心&nbsp;&nbsp;<a
+        <%=session.getAttribute("admin_name") + "，" + wel%>，欢迎来到编程技术交流中心&nbsp;&nbsp;<a
 							href="loginOut.jsp">退出</a>&nbsp;/&nbsp;<a href="adminIndex.jsp">首页</a></font>
         <%
  		

@@ -65,7 +65,7 @@ body{
 					    <div align="center">
                         <input type="submit" value="登录">
                         <input type="reset" value="重新输入"> 
-                    
+                     <a href="adminReg.jsp">    <input type="button" value="管理员注册"> </a>
                   </div></td>
                     </tr>
              </tbody>     

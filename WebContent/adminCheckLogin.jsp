@@ -79,7 +79,7 @@ body {
 		<% 
 		out.println("<div align=\"center\">");
 		out.println("输入的用户名或者密码为空字符串，请再次登录输入");
-		out.println("<a href='jspLogin.jsp'>点击这里重新登录吧</a><br>");
+		out.println("<a href='adminLogin.jsp'>点击这里重新登录吧</a><br>");
 		out.println("</div>");
 		return;	
 	}
@@ -122,7 +122,7 @@ else  if (!rand.equals(input)) {
 	  
 <div align="center">
 验证码输入错误！<br>
-<a href='jspLogin.jsp'>点击这里重新登录吧</a><br>
+<a href='adminLogin.jsp'>点击这里重新登录吧</a><br>
 </div>
 <%
 return;
@@ -130,7 +130,7 @@ return;
       } 
 else {
 
-	request.getSession(true).setAttribute("user_name",Login_name);
+	request.getSession(true).setAttribute("admin_name",Login_name);
     	  %>
 <jsp:forward page="adminloginOK.jsp"/>
     	  
@@ -143,6 +143,6 @@ rs.close();
 stmt.close(); 
 connection.close(); 
 %>
-<a href="jspLogin.jsp">如果要回到登录界面，请点击这里</a><br>
+<a href="adminLogin.jsp">如果要回到登录界面，请点击这里</a><br>
 </body>
 </html>

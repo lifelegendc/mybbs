@@ -46,6 +46,19 @@ body{
     tpcid=request.getParameter("tpcid");
 	//insert_name=new String(insert_name.getBytes("utf-8"),"GB18030");
 	content=request.getParameter("content");
+	
+	//回复帖子非空判断
+	
+	if(content==null||content.equals(""))
+	{
+		out.println("<br><br><br><br><div align=\"center\">");
+		out.print("内容不能为空！<br>"); 
+		out.println("<a href=\"view.jsp\">回到贴吧</a><br>");
+		out.println("<a href=\"index.jsp\">回到首页</a><br>");
+		out.println("</div>");
+		return;
+	}
+	else{
 	name=request.getParameter("name");
 	date=request.getParameter("date");
 
@@ -79,7 +92,7 @@ out.println("</div>");
 
 
 stmt.close(); 
-connection.close(); 
+connection.close(); }
 %>
 
 </body>

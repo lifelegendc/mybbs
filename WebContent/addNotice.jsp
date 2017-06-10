@@ -43,6 +43,8 @@ System.out.println(date2);
 %>
   
   
+  
+  
     <div align="center">
 	  <%@ include file="Top.jsp"%>
 	    <form method="post" action="insertNotice.jsp" >

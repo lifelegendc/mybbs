@@ -58,6 +58,40 @@ body{
     title=request.getParameter("title");
 	//insert_name=new String(insert_name.getBytes("utf-8"),"GB18030");
 	content=request.getParameter("content");
+	if((title==null||title.equals(""))&&(content==null||content.equals(""))){
+		out.println("<br><br><br><br><div align=\"center\">");
+		out.print("标题、内容不能为空！<br>"); 
+		out.println("<a href=\"post.jsp\">重新发帖</a><br>");
+		out.println("<a href=\"index.jsp\">回到首页</a><br>");
+		out.println("</div>");
+		return;
+		
+		
+	}
+	
+	
+	else if(title==null||title.equals(""))
+		
+	{
+		
+		out.println("<br><br><br><br><div align=\"center\">");
+		out.print("标题不能为空！<br>"); 
+		out.println("<a href=\"post.jsp\">重新发帖</a><br>");
+		out.println("<a href=\"index.jsp\">回到首页</a><br>");
+		out.println("</div>");
+		return;
+	}
+	else if(content==null||content.equals(""))
+	{
+		out.println("<br><br><br><br><div align=\"center\">");
+		out.print("内容不能为空！<br>"); 
+		out.println("<a href=\"post.jsp\">重新发帖</a><br>");
+		out.println("<a href=\"index.jsp\">回到首页</a><br>");
+		out.println("</div>");
+		return;
+	}
+	else{
+	
 	name=request.getParameter("name");
 	Date date1=new Date();
 	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
@@ -90,7 +124,7 @@ out.println("</div>");
 
 
 stmt.close(); 
-connection.close(); 
+connection.close(); }
 %>
 
 </body>

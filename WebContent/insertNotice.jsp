@@ -43,6 +43,40 @@ body{
 	//insert_name=new String(insert_name.getBytes("utf-8"),"GB18030");
 	content=request.getParameter("content");
 	title=request.getParameter("title");
+	
+	if((title==null||title.equals(""))&&(content==null||content.equals(""))){
+		out.println("<br><br><br><br><div align=\"center\">");
+		out.print("标题、内容不能为空！<br>"); 
+		out.println("<a href=\"addNotice.jsp\">重发公告</a><br>");
+		out.println("<a href=\"adminIndex.jsp\">回到首页</a><br>");
+		out.println("</div>");
+		return;
+		
+		
+	}
+	
+	
+	else if(title==null||title.equals(""))
+		
+	{
+		
+		out.println("<br><br><br><br><div align=\"center\">");
+		out.print("标题不能为空！<br>"); 
+		out.println("<a href=\"addNotice.jsp\">重发公告</a><br>");
+		out.println("<a href=\"adminIndex.jsp\">回到首页</a><br>");
+		out.println("</div>");
+		return;
+	}
+	else if(content==null||content.equals(""))
+	{
+		out.println("<br><br><br><br><div align=\"center\">");
+		out.print("内容不能为空！<br>"); 
+		out.println("<a href=\"addNotice.jsp\">重发公告</a><br>");
+		out.println("<a href=\"adminIndex.jsp\">回到首页</a><br>");
+		out.println("</div>");
+		return;
+	}
+	else{
 	date=request.getParameter("date3");
 System.out.println("传递过来的参数："+date);
 	
@@ -69,7 +103,7 @@ out.println("</div>");
 
 
 stmt.close(); 
-connection.close(); 
+connection.close(); }
 %>
 
 </body>

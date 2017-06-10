@@ -123,5 +123,17 @@
 	   window.showModalDialog(str,"","dialogWidth=300px;dialogHeight=150px;status=no;help=no;scrollbars=no");
 	}
 	
-    
+	function openWin2(user_name){
+		   if (!checkAcnt()){
+				reg.user_name.focus();
+				//System.out.println("输入不合法！");
+				return;
+		   }
+		//System.out.println(user_name.value); 
+		// out.clear();  
+		//out.flush();
+		   var str="checkAdmin.jsp?user_name='"+user_name+"'";
+		   window.showModalDialog(str,"","dialogWidth=300px;dialogHeight=150px;status=no;help=no;scrollbars=no");
+		}
+		
 	//-->

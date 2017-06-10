@@ -20,7 +20,7 @@ body{
 	}
 </style>
 <%session.setAttribute("user_name",null); %>
-
+<%session.setAttribute("admin_name",null); %>
 <br><br><br><br>
 <div align="center">
 <span class="jive-thread-name"><font color="white">登出成功！3秒后自动转到登录界面，没有跳转请点击</font></span><a href = "jspLogin.jsp" class="jive-thread-name">这里</a> 

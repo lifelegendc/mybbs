@@ -29,6 +29,7 @@
           <li class="active"><a href="view.jsp">查看帖子</a></li>
           <li><a href="news.jsp">要闻速递</a></li>
           <li><a href="contests.jsp">最新赛事</a></li>
+          
           <li><a href="loginOut.jsp">登出</a></li>
         </ul>
        <div class="search">
@@ -58,24 +59,24 @@
           <p>在我大概十一二岁的时候，我感到需要给自己做一个网站。我已经记不清为什么需要一个网站了，只记得那样就开始做了。于是我就在网上搜索关于网页、Web浏览器、HTML如何工作的信息。很多的信息我发现都已经过时了，有些明显是错误的或给了错误的向导（例如为IE浏览器和Netscape浏览器分别做网站），但过程是非常的有趣的，我学到了很多新东西。</p>
           <p>下面，开始你的第一步尝试吧！</p>
           <ul class="sb_menu">
-            <li><a href="#"><strong>做练习性项目</strong></a></li>
-            <li><a href="#"><strong>看编程书籍</strong></a></li>
-            <li><a href="#"><strong>读编程类博客</strong></a></li>
-            <li><a href="#"><strong>做项目练习</strong></a></li>
-            <li><a href="#"><strong>上计算机课程</strong></a></li>
+            <li><a href="http://www.w3school.com.cn/"><strong>前端设计</strong></a></li>
+            <li><a href="https://www.bccn.net/"><strong>编程中国</strong></a></li>
+            <li><a href="http://www.jb51.net/"><strong>脚本之家</strong></a></li>
+        
         
           </ul>
         </div>
       </div>
       <div class="sidebar">
         <div class="gadget">
-          <h2><cufon class="cufon cufon-canvas" alt="Sidebar " style="width: 90px; height: 24px;"><canvas width="141" height="32" style="width: 141px; height: 32px; top: -5px; left: -16px;"></canvas><cufontext>More </cufontext></cufon><cufon class="cufon cufon-canvas" alt="Menu" style="width: 61px; height: 24px;"><canvas width="105" height="32" style="width: 105px; height: 32px; top: -5px; left: -16px;"></canvas><cufontext>Menu</cufontext></cufon></h2>
+          <h2><cufon class="cufon cufon-canvas" alt="Sidebar " style="width: 90px; height: 24px;"><cufontext>Sidebar</cufontext></cufon><cufon class="cufon cufon-canvas" alt="Menu" style="width: 61px; height: 24px;"><cufontext>Menu</cufontext></cufon></h2>
           <div class="clr"></div>
           <ul class="sb_menu">
             <li><a href="viewNotice.jsp">查看公告</a></li>
             <li><a href="http://www.imooc.com/">课程链接</a></li>
             <li><a href="http://bbs.csdn.net">CSDN链接</a></li>
-      
+            <li><a href="http://www.runoob.com/">菜鸟教程</a></li>
+            <li><a href="https://www.coursera.org/">Coursera</a></li>
           </ul>
         </div>
         <div class="gadget">
@@ -90,7 +91,7 @@
           </ul>
         </div>
         <div class="gadget">
-          <h2><cufon class="cufon cufon-canvas" alt="Wise " style="width: 60px; height: 24px;"><canvas width="112" height="32" style="width: 112px; height: 32px; top: -5px; left: -16px;"></canvas><cufontext>Wise </cufontext></cufon><cufon class="cufon cufon-canvas" alt="Words" style="width: 69px; height: 24px;"><canvas width="116" height="32" style="width: 116px; height: 32px; top: -5px; left: -16px;"></canvas><cufontext>Words</cufontext></cufon></h2>
+          <h2><cufon class="cufon cufon-canvas" alt="Wise " style="width: 60px; height: 24px;"><cufontext>Wise </cufontext></cufon><cufon class="cufon cufon-canvas" alt="Words" style="width: 69px; height: 24px;"><canvas width="116" height="32" style="width: 116px; height: 32px; top: -5px; left: -16px;"></canvas><cufontext>Words</cufontext></cufon></h2>
           <div class="clr"></div>
           <p>   <img src="images/test_1.gif" alt="image" width="20" height="18"> <em>We can let circumstances rule us, or we can take charge and rule our lives from within </em>.<img src="images/test_2.gif" alt="image" width="20" height="18"></p>
           <p style="float:right;"><strong>Earl Nightingale</strong></p>
