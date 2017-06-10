@@ -18,8 +18,12 @@ body{
 </style>
 </head>
 <body>
+ <br><br><br><br>
+
+
   <div align = "center">
-    	<span class="jive-thread-name">登录成功！3秒后自动转到首页，没有跳转请点击</span><a href = "adminIndex.jsp" class="jive-thread-name">这里</a> 
+  
+    	<span class="jive-thread-name"><font color="white">登录成功！3秒后自动转到首页，没有跳转请点击</span><a href = "adminIndex.jsp" class="jive-thread-name">这里</a> 
  </div>
     	    <% System.out.println("登录名 +"+session.getAttribute("user_name"));%>
 </body>

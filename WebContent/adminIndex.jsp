@@ -28,9 +28,11 @@ body{
 							
 								<br>
 							<p><a class="btn btn-primary btn-lg btn-learn" href="addNotice.jsp">添加公告</a>
+							<a class="btn btn-primary btn-lg btn-learn" href="deleteNotice.jsp">删除公告</a>
+							 <a class="btn btn-primary btn-lg btn-learn" href="viewNotice.jsp">查看公告</a>
 							 <a href="deletePost.jsp" class="btn btn-primary btn-lg popup-vimeo btn-video">
 							 <i class="icon-play"></i>管理帖子</a></p>
-							 <a class="btn btn-primary btn-lg btn-learn" href="viewNotice.jsp">查看公告</a>
+							  <a class="btn btn-primary btn-lg btn-learn" href="updatePwd.jsp">修改密码</a>
 							  <a class="btn btn-primary btn-lg btn-learn" href="loginOut.jsp">登出</a>
 						</div>
 </body>

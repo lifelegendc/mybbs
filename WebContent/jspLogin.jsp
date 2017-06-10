@@ -1,3 +1,81 @@
+<!-- 
+/*数据库建库代码*/
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+CREATE DATABASE `bbs`;
+USE `bbs`;
+/* Create table in target */
+CREATE TABLE `users`(
+	`username` VARCHAR(12) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`password` VARCHAR(12) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`gender` CHAR(4) COLLATE gb18030_chinese_ci NULL  , 
+	`email` VARCHAR(30) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`findQ` VARCHAR(30) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`findA` VARCHAR(30) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`birthdate` CHAR(10) COLLATE gb18030_chinese_ci NULL  , 
+	PRIMARY KEY (`username`) 
+) ENGINE=INNODB DEFAULT CHARSET='gb18030' COLLATE='gb18030_chinese_ci';
+
+
+/* Create table in target */
+CREATE TABLE `admins`(
+	`adminname` VARCHAR(12) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`password` VARCHAR(12) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`findQ` VARCHAR(30) COLLATE gb18030_chinese_ci NULL  , 
+	`findA` VARCHAR(30) COLLATE gb18030_chinese_ci NULL  , 
+	`gender` CHAR(2) COLLATE gb18030_chinese_ci NULL  , 
+	`email` VARCHAR(30) COLLATE gb18030_chinese_ci NULL  , 
+	PRIMARY KEY (`adminname`) 
+) ENGINE=INNODB DEFAULT CHARSET='gb18030' COLLATE='gb18030_chinese_ci';
+
+/* Create table in target */
+CREATE TABLE `topic`(
+	`title` VARCHAR(40) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`content` VARCHAR(400) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`tpcid` INT(11) NOT NULL  AUTO_INCREMENT , 
+	`date` DATETIME NOT NULL  , 
+	`viewtimes` INT(11) NOT NULL  , 
+	`dsc` INT(11) NOT NULL  , 
+	`user` VARCHAR(12) COLLATE gb18030_chinese_ci NOT NULL  , 
+	PRIMARY KEY (`tpcid`) , 
+	KEY `userwho`(`user`) , 
+	CONSTRAINT `userwho` 
+	FOREIGN KEY (`user`) REFERENCES `users` (`username`) 
+) ENGINE=INNODB DEFAULT CHARSET='gb18030' COLLATE='gb18030_chinese_ci';
+
+/* Create table in target */
+CREATE TABLE `dsc`(
+	`dscid` INT(11) NOT NULL  AUTO_INCREMENT , 
+	`tpcid` INT(11) NOT NULL  , 
+	`content` VARCHAR(400) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`user` VARCHAR(12) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`date` DATETIME NOT NULL  , 
+	PRIMARY KEY (`dscid`,`tpcid`) , 
+	KEY `topic&dsc`(`tpcid`) , 
+	KEY `dsc/username`(`user`) , 
+	CONSTRAINT `dsc/username` 
+	FOREIGN KEY (`user`) REFERENCES `users` (`username`) , 
+	CONSTRAINT `topic&dsc` 
+	FOREIGN KEY (`tpcid`) REFERENCES `topic` (`tpcid`) 
+) ENGINE=INNODB DEFAULT CHARSET='gb18030' COLLATE='gb18030_chinese_ci';
+
+
+/* Create table in target */
+CREATE TABLE `notice`(
+	`ntcid` INT(11) NOT NULL  AUTO_INCREMENT , 
+	`adminname` VARCHAR(20) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`title` VARCHAR(40) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`content` VARCHAR(400) COLLATE gb18030_chinese_ci NOT NULL  , 
+	`date` DATETIME NOT NULL  , 
+	PRIMARY KEY (`ntcid`) , 
+	KEY `adminid`(`adminname`) , 
+	CONSTRAINT `notice_ibfk_1` 
+	FOREIGN KEY (`adminname`) REFERENCES `admins` (`adminname`) 
+) ENGINE=INNODB DEFAULT CHARSET='gb18030' COLLATE='gb18030_chinese_ci';
+
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+ -->
+
+
 <%@ page language="java" contentType="text/html; charset=GB18030" pageEncoding="GB18030"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

@@ -33,7 +33,7 @@ body{
   </head>
 
   <body>
-<%String adminname=(String)session.getAttribute("user_name"); 
+<%String adminname=(String)session.getAttribute("admin_name"); 
 Date date1=new Date();
 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
 String date2= dateFormat.format(date1); 
@@ -48,7 +48,7 @@ System.out.println(date2);
     <div align="center">
 	  <%@ include file="Top.jsp"%>
 	    <form method="post" action="insertNotice.jsp" >
-	    <input type="hidden" name="name" value="<%=session.getAttribute("user_name") %>"/>
+	   
 	   
 	    <table width="65%" border="0" cellspacing="0" cellpadding="0">
 		  <tr>

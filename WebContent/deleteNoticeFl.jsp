@@ -19,7 +19,7 @@ body{
 <link href="styles.css" rel="stylesheet" type="text/css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
-<title>Insert title here</title>
+<title>删除公告</title>
 </head>
 <body>
  <table width="90%"  border="0" cellspacing="0" cellpadding="0">
@@ -27,7 +27,7 @@ body{
     DBConn dv=new DBConn();
 	String delete_id="0";
 	Connection connection;//数据库连接
-	String	tableName="dsc";
+	String	tableName="notice";
 	Statement stmt;//语句对象
 	String sql="";//sql语句
 	ResultSet rs;//结果集合
@@ -36,40 +36,22 @@ body{
 <%
 
 request.setCharacterEncoding("utf-8");
-delete_id=request.getParameter("tpcid");
-System.out.println(delete_id);
+delete_id=request.getParameter("ntcid");
+
 connection=dv.connectDB();
 //连接数据库之后，创建语句对象
 stmt = connection.createStatement();
 //sql语句
 
-sql="select * from "+tableName+" where tpcid="+delete_id+"";
-System.out.println(sql);
-rs=stmt.executeQuery(sql);
 
-
-
-if(!rs.first())//如果没有这条记录
-{
-
-}
-else{
-	
-	sql = "delete from "+tableName+" where tpcid="+delete_id+"";
-	System.out.println(sql);
-	stmt.executeUpdate(sql);
-	
-
-}
-
-tableName="topic";
-sql = "delete from "+tableName+" where tpcid="+delete_id+"";
+sql = "delete from "+tableName+" where ntcid="+delete_id+"";
 //创建语句对象之后，通过语句对象进行查询操作，返回结果集合
 stmt.executeUpdate(sql);
 	out.println("<div align=\"center\">");
-	out.print("恭喜您，删除成功！"); 
+	out.print("恭喜您，删除成功！<br>"); 
 	out.println("<a href='adminIndex.jsp'>回到首页</a><br>");
-
+	out.println("<a href='viewNotice.jsp'>查看公告</a><br>");
+	out.println("<a href='deleteNotice.jsp'>删除公告</a><br>");
 	out.println("</div>");
 
 %>

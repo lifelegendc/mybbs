@@ -29,7 +29,7 @@
           <li class="active"><a href="view.jsp">查看帖子</a></li>
           <li><a href="news.jsp">要闻速递</a></li>
           <li><a href="contests.jsp">最新赛事</a></li>
-          
+
           <li><a href="loginOut.jsp">登出</a></li>
         </ul>
        <div class="search">
@@ -73,6 +73,7 @@
           <div class="clr"></div>
           <ul class="sb_menu">
             <li><a href="viewNotice.jsp">查看公告</a></li>
+            <li><a href="updatePwd.jsp">修改密码</a></li>
             <li><a href="http://www.imooc.com/">课程链接</a></li>
             <li><a href="http://bbs.csdn.net">CSDN链接</a></li>
             <li><a href="http://www.runoob.com/">菜鸟教程</a></li>
